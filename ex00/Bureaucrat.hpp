@@ -6,7 +6,7 @@
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 12:49:13 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/15 00:15:49 by iqabbal          ###   ########.fr       */
+/*   Updated: 2023/02/15 23:02:24 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class Bureaucrat{
     std::string getName()const;
     int getGrade()const;    
 
+    //setters
+    void setGrade(int grade);
     //increment
     void increment();
     //decrement
@@ -52,7 +54,7 @@ class Invalid : public std::exception {
 };
 
 };
-std::ostream &operator>>(std::ostream &output,const Bureaucrat &b1);
+std::ostream &operator<<(std::ostream &output,const Bureaucrat &b1);
 
 #endif
 //2.33

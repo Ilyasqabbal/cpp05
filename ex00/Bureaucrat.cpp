@@ -6,7 +6,7 @@
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 12:49:29 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/15 00:39:09 by iqabbal          ###   ########.fr       */
+/*   Updated: 2023/02/15 23:01:58 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Bureaucrat ::Bureaucrat(std::string name,int grade):name(name)
 Bureaucrat::~Bureaucrat()
 {
 }
-Bureaucrat::Bureaucrat(const  Bureaucrat &copy)
+Bureaucrat::Bureaucrat(const  Bureaucrat &copy):name(copy.name)
 {
     this->grade = copy.grade;
 }
@@ -60,7 +60,12 @@ int Bureaucrat:: getGrade()const
     return this->grade;
 }
 
-std::ostream &operator>>(std::ostream &output,const Bureaucrat &b1)
+void Bureaucrat::setGrade(int grade)
+{
+    this->grade = grade;
+}
+
+std::ostream &operator<<(std::ostream &output,const Bureaucrat &b1)
 {
     output <<"the Grade is : " << b1.getGrade() << "\nThe Name is : "<< b1.getName() << std::endl;
     return output;

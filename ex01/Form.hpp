@@ -6,7 +6,7 @@
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 00:45:08 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/15 01:38:55 by iqabbal          ###   ########.fr       */
+/*   Updated: 2023/02/15 23:50:01 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,75 +14,40 @@
 #define FORM_HPP
 
 #include <iostream>
-#include "Bureaucrat.hpp"
 
+class Bureaucrat;
 class Form {
+  private:
+    const std::string Name;
+    const int GradeToSign;
+    const int GradeToExecute;
+    bool Signed;
+    
+    
+  
   public: 
-    Form();
     ~Form();
+    Form(std::string _Name,int _GradeToSign ,int _GradeToExecute);
     Form(const Form &copy);
     Form &operator=(const Form &rf);
-
 
     std::string get_Name() const;
     bool        get_Signed() const;
     int         get_GradeToSign() const;
     int         get_GradeToExecute() const;
 
-    void        beSigned( const Bureaucrat& bureaucrat );
+    void        beSigned(Bureaucrat& bureaucrat );
 
-    class GradeTooHighException : public std::exception {
+class GradeTooHighException : public std::exception {
+    public:
     const char* what() const throw();
 };
 
 class GradeTooLowException : public std::exception {
+    public:
     const char* what() const throw();
 };
-    private:
-        const std::string name;
-        bool _signed;
-        const int sign_it;
-        const int execute_it;
-    
+ 
 };
-
-
-
-
-std::string Form:: get_Name() const
-{
-    return(this->name);
-}
-bool  Form::get_Signed() const
-{
-    return(this->_signed);
-}
-int   Form::get_GradeToSign() const
-{
-    return(this->sign_it);
-}
-int   Form::get_GradeToExecute() const
-{
-    return(this->execute_it);
-}
-
-void  Form::beSigned( const Bureaucrat& bureaucrat )
-{
-    if(bureaucrat.getGrade() > this->get_GradeToSign())
-    {
-        this->_signed = true;
-    }
-    else
-    {
-        
-    }
-}
-
-
-
-
-
+std::ostream &operator<<(std::ostream &output,const Form &form);
 #endif
-
-
-    
