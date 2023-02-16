@@ -45,7 +45,7 @@ const char *AForm::GradeTooHighException::what(void) const throw()
 
 
 //orthodox AForm
-AForm::AForm(std::string _Name,int _GradeToSign ,int _GradeToExecute) : Name(_Name) , GradeToSign(_GradeToSign) ,GradeToExecute(_GradeToExecute)
+AForm::AForm(std::string _Name,int _GradeToSign,int _GradeToExecute) : Name(_Name) , GradeToSign(_GradeToSign) ,GradeToExecute(_GradeToExecute)
 {
     this->Signed = false;
 
@@ -60,7 +60,7 @@ AForm::AForm(std::string _Name,int _GradeToSign ,int _GradeToExecute) : Name(_Na
 AForm::~AForm()
 {
 }
-AForm::AForm(const AForm &copy) :Name(copy.get_Name()) , GradeToSign(copy.get_GradeToSign()) ,GradeToExecute(copy.get_GradeToExecute())
+AForm::AForm(const AForm &copy) :Name(copy.get_Name()) , GradeToSign(copy.get_GradeToSign()), GradeToExecute(get_GradeToExecute())
 {
     this->Signed = copy.get_Signed();
 }
@@ -89,7 +89,7 @@ void  AForm::beSigned( Bureaucrat& bureaucrat )
 
 std::ostream &operator<<(std::ostream &output,const AForm &AForm)
 {
-    output << "F-O-R-M ** I-N-F-O" << std::endl;
+    output << "\nF-O-R-M ** I-N-F-O\n" << std::endl;
     output << "Name             : "<< AForm.get_Name()<< std::endl  ;
     output << "Grade to execute : "<< AForm.get_GradeToExecute()<< std::endl  ;
     output << "Grade to sign    : "<< AForm.get_GradeToSign()<< std::endl  ;

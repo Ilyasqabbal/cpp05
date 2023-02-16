@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 13:19:27 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/15 23:57:29 by iqabbal          ###   ########.fr       */
+/*   Created: 2023/02/01 13:19:27 by iqabbal           #+#    #+#             */
+/*   Updated: 2023/02/16 04:33:51 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int main()
     //ex01
     try
 	{
-		Form a("war9a",150, 150);
+		Form a("chahadat sokna",150);
         std::cout << a <<std::endl;
-		Bureaucrat b("lm9adem", 19);
+		Bureaucrat b("a5enoch", 19);
 		b.signForm(a);
         std::cout << "\n--------\n\n";
         std::cout << a <<std::endl;

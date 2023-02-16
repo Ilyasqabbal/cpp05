@@ -6,7 +6,7 @@
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 12:49:29 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/16 03:26:37 by iqabbal          ###   ########.fr       */
+/*   Updated: 2023/02/16 04:20:26 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,7 +131,7 @@ void Bureaucrat::executeForm(AForm const &AForm_)
 	try{
 		AForm_.execute(*this)                       ;
 		std::cout << this->name                     ;
-        std::cout << " Executed !!"                   ; 
+        std::cout << " executed "                   ; 
         std::cout << AForm_.get_Name()              ;
         std::cout << std::endl                      ;
 	}

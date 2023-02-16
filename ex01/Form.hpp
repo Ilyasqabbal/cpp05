@@ -6,7 +6,7 @@
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 00:45:08 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/15 23:50:01 by iqabbal          ###   ########.fr       */
+/*   Updated: 2023/02/16 04:33:15 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Form {
   
   public: 
     ~Form();
-    Form(std::string _Name,int _GradeToSign ,int _GradeToExecute);
+    Form(std::string _Name,int _GradeToSign);
     Form(const Form &copy);
     Form &operator=(const Form &rf);
 

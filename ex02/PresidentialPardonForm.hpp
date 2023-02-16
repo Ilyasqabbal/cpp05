@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/05 01:17:05 by iqabbal           #+#    #+#             */
+/*   Updated: 2023/02/16 04:19:09 by iqabbal          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <iostream>
 #include "AForm.hpp"
+#include "Bureaucrat.hpp"
 
 class PresidentialPardonForm : public AForm{
     private:
@@ -23,8 +35,5 @@ class PresidentialPardonForm : public AForm{
 	    };
 
         //execute function
-        
+        void execute(Bureaucrat const & executor) const;
 };
-
-
-

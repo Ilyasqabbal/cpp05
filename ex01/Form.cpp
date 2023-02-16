@@ -6,7 +6,7 @@
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 00:45:14 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/15 23:56:29 by iqabbal          ###   ########.fr       */
+/*   Updated: 2023/02/16 04:33:04 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ const char *Form::GradeTooHighException::what(void) const throw()
 
 
 //orthodox Form
-Form::Form(std::string _Name,int _GradeToSign ,int _GradeToExecute) : Name(_Name) , GradeToSign(_GradeToSign) ,GradeToExecute(_GradeToExecute)
+Form::Form(std::string _Name,int _GradeToSign) : Name(_Name) , GradeToSign(_GradeToSign) ,GradeToExecute(0)
 {
     this->Signed = false;
 
     
-    if(this->GradeToSign > 150 || this->GradeToExecute > 150)
+    if(this->GradeToSign > 150)
         throw GradeTooLowException();
-    if(this->GradeToSign < 1 || this->GradeToExecute < 1)
+    if(this->GradeToSign < 1)
         throw GradeTooHighException();
     
 }
@@ -89,7 +89,7 @@ void  Form::beSigned( Bureaucrat& bureaucrat )
 
 std::ostream &operator<<(std::ostream &output,const Form &form)
 {
-    output << "F-O-R-M ** I-N-F-O" << std::endl;
+     output << "\nF-O-R-M ** I-N-F-O\n" << std::endl;
     output << "Name             : "<< form.get_Name()<< std::endl  ;
     output << "Grade to execute : "<< form.get_GradeToExecute()<< std::endl  ;
     output << "Grade to sign    : "<< form.get_GradeToSign()<< std::endl  ;
