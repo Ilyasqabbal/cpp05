@@ -6,9 +6,12 @@
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 01:17:05 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/16 04:19:09 by iqabbal          ###   ########.fr       */
+/*   Updated: 2023/02/16 05:36:28 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PRESIDENTIALPARDONFORM_HPP
+#define PRESIDENTIALPARDONFORM_HPP
 
 #include <iostream>
 #include "AForm.hpp"
@@ -37,3 +40,5 @@ class PresidentialPardonForm : public AForm{
         //execute function
         void execute(Bureaucrat const & executor) const;
 };
+
+#endif

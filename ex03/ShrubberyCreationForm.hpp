@@ -6,9 +6,12 @@
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 01:23:03 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/16 02:34:34 by iqabbal          ###   ########.fr       */
+/*   Updated: 2023/02/16 05:38:15 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
@@ -40,4 +43,5 @@ class ShrubberyCreationForm : public AForm
         
 };
 
+#endif
 
