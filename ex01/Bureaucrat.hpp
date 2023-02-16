@@ -6,7 +6,7 @@
 /*   By: iqabbal <iqabbal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 12:49:13 by iqabbal           #+#    #+#             */
-/*   Updated: 2023/02/15 23:07:54 by iqabbal          ###   ########.fr       */
+/*   Updated: 2023/02/16 06:14:32 by iqabbal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,3 @@ class Invalid : public std::exception {
 std::ostream &operator<<(std::ostream &output,const Bureaucrat &b1);
 
 #endif
-//2.33
